@@ -10,4 +10,8 @@ server {
     proxy_pass              http://localhost:8000;
     proxy_set_header        Host $host;
   }
+  location /static {
+    autoindex on;
+    alias /var/www/toruscommunity.space/static/;
+  }
 }
